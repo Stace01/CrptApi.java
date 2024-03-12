@@ -193,5 +193,11 @@ public class CrptApi {
     public enum Type {
         LP_INTRODUCE_GOODS
     }
+
+    public static void main(String[] args) throws Exception {
+        CrptApi crptApi = new CrptApi(TimeUnit.SECONDS, 5);
+        String result = crptApi.createDocument(new Document(), "signature");
+        System.out.println(result);
+    }
 }
 
